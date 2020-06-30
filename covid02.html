@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RoboCV19</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    
+
+    <script>
+
+                  
+        function dialogo() {
+    
+    
+            var nome = prompt('Olá meu nome é RoboCV19, como você se chama? ')
+            
+            var sabe = prompt('Legal é um prazer te conhecer ' + nome + ', você sabe o que é COVID-19?')
+            
+            if(!(sabe == 'sim' || sabe == 'Sim' || sabe == 'SIM')){
+                alert('COVID-19 é a doença infecciosa causada pelo mais recente coronavírus descoberto. O vírus e a doença eram desconhecidos antes do surto iniciado em Wuhan, na China, em dezembro de 2019. Como nunca tivemos contato com o vírus antes, não temos imunidade contra ele. ')
+            }   
+            
+            var continuar = prompt('Vamos conversar sobre algumas medidas de prevenção? ')        
+
+            if(continuar == 'sim' || continuar == 'Sim' || continuar == 'SIM') {
+
+                var lava = prompt('Você lava as mãos frequentemente com água e sabão?')
+
+                if(lava == 'sim' || lava == 'Sim' || lava == 'SIM'){
+                    alert ('Parabéns! De acordo com a Organização Mundial da Saúde, o simples ato de lavar as mãos reduz em até 40% o risco de contrair doenças')
+                } 
+
+                else{
+                    alert ('Que tal começarmos a praticar isso! Pois, de acordo com a Organização Mundial da Saúde, o simples ato de lavar as mãos reduz em até 40% o risco de contrair doenças.')
+                }
+
+
+                swal({
+                title: "Como higienizar as mãos com água e sabonete?",
+                text: "Duração do procedimento: 40 a 60 seg",
+                buttons: true,
+                }).then(function(result) {
+                if (result) {
+                    swal({
+                    text: "Molhe as mãos com água ",
+                    icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-00.jpg",
+                    buttons: true,
+                    }).then(function(result) {
+                    if (result) {
+                        swal({
+                        text: "Aplique na palma da mão quantidade suficiente de sabonete líquido para cobrir todas as superficies das mãos. ",
+                        icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-01.jpg",
+                        buttons: true,
+                        }).then(function(result) {
+                        if (result) {
+                            swal({
+                            text: "Ensaboe as palmas das mãos friccionando-as entre si. ",
+                            icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-02.jpg",
+                            buttons: true,
+                            }).then(function(result) {
+                            if (result) {
+                                swal({
+                                text: "Esfregue a palma da mão direita contra o dorso da mão esquerda entrelaçando os dedos e vice-versa ",
+                                icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-03.jpg",
+                                buttons: true,
+                                }).then(function(result) {
+                                if (result) {
+                                    swal({
+                                    text: "Entrelace os dedos e friccione os espaços interdigitais.  ",
+                                    icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-04.jpg",
+                                    buttons: true,
+                                    }).then(function(result) {
+                                    if (result) {
+                                        swal({
+                                        text: "Esfregue o dorso dos dedos de uma mão com a palma da mão oposta, segurando os dedos, com movimento de vai-e-vem e vice-versa ",
+                                        icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-05.jpg",
+                                        buttons: true,
+                                        }).then(function(result) {
+                                        if (result) {
+                                            swal({
+                                            text: "Esfregue o polegar esquerdo, com o auxílio da palma da mão direita, utilizando-se de movimento circular e vice-versa ",
+                                            icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-06.jpg",
+                                            buttons: true,
+                                            }).then(function(result) {
+                                            if (result) {
+                                                swal({
+                                                text: "Friccione as polpas digitais e unhas da mão direita contra a palma da mão esquerda, fazendo movimento circular e vice-versa  ",
+                                                icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-07.jpg",
+                                                buttons: true,
+                                                }).then(function(result) {
+                                                if (result) {
+                                                    swal({
+                                                    text: "Enxágue bem as mãos com água ",
+                                                    icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-08.jpg",
+                                                    buttons: true,
+                                                    }).then(function(result) {
+                                                    if (result) {
+                                                        swal({
+                                                        text: "Seque as mãos com papel toalha descartável ",
+                                                        icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-09.jpg",
+                                                        buttons: true,
+                                                        }).then(function(result) {
+                                                        if (result) {
+                                                            swal({
+                                                            text: "No caso de torneiras com contato manual para fechamento, sempre utilize papel toalha.  ",
+                                                            icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-10.jpg",
+                                                            buttons: true,
+                                                            }).then(function(result) {
+                                                            if (result) {
+                                                                swal({
+                                                                text: "Agora suas mãos estão seguras",
+                                                                icon: img ="https://www.paho.org/bra/images/stories/covid-19/wash-11.jpg",
+                                                                buttons: true,
+                                                                })
+                                                        
+                                                                
+                                                                .then(function(result) {
+                                                                if (result) {
+                                                                
+                                                                    continue1()
+                                                                 
+                                                            
+                                                                } 
+                                                            });
+                                                                    
+                                                            
+                                                            } 
+                                                            });
+                                                            
+                                                        } 
+                                                        });
+                                                    
+                                                    } 
+                                                    });
+                                                    
+                                                } 
+                                                });
+                                            
+                                            } 
+                                            });
+                                            
+                                        } 
+                                        });
+                                    
+                                    } 
+                                    });
+                                    
+                                } 
+                                });
+                                            
+                            } 
+                            });
+                            
+                        } 
+                        });
+                    
+                    } 
+                    });
+                    
+                } 
+                });
+
+
+
+
+            }
+
+            else{
+                continue3();
+            }
+
+        }
+
+
+
+                
+                
+        function continue1() {
+
+
+
+                var alcool = prompt('Quando está em algum lugar utiliza álcool gel 70%?')
+
+                if(alcool == 'sim' || alcool == 'Sim' || alcool == 'SIM'){
+                    alert ('Muito bem, continue assim! ')
+                }
+
+                else{
+                    alert ('Acho que é o momento de começar a usar! Pois, o álcool em gel, ajuda na prevenção contra o Corona Vírus e também é indicado para prevenção ao contágio de doenças respiratórias. Alcool 70% é o recomendado pela Anvisa, para os serviços de saúde brasileiros e o indicado pela OMS na Lista de Medicamentos Essenciais.')
+                }
+
+
+
+                swal({
+                title: "Como higienizar as mãos com álcool em gel?",
+                text: "Duração do procedimento: 20 a 30 seg",
+                buttons: true,
+                }).then(function(result) {
+                if (result) {
+                    swal({
+                    text: "Aplique uma quantidade suficiente de preparação alcoólica em uma mão em forma de concha para cobrir todas as superficies das mãos. ",
+                    icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-01ab.jpg",
+                    buttons: true,
+                    }).then(function(result) {
+                    if (result) {
+                        swal({
+                        text: "Friccione as palmas das mãos entre si. ",
+                        icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-02.jpg",
+                        buttons: true,
+                        }).then(function(result) {
+                        if (result) {
+                            swal({
+                            text: "Friccione a palma direita contra o dorso da mão esquerda entrelaçando os dedos e vice-versa. ",
+                            icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-03.jpg",
+                            buttons: true,
+                            }).then(function(result) {
+                            if (result) {
+                                swal({
+                                text: "Friccione a palma das mãos entre si com os dedos entrelaçados. ",
+                                icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-04.jpg",
+                                buttons: true,
+                                }).then(function(result) {
+                                if (result) {
+                                    swal({
+                                    text: "Friccione o dorso dos dedos de uma mão com a palma da mão oposta, segurando os dedos, com movimento de vai-e-vem e vice-versa. ",
+                                    icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-05.jpg",
+                                    buttons: true,
+                                    }).then(function(result) {
+                                    if (result) {
+                                        swal({
+                                        text: "Friccione o polegar esquerdo, com o auxilio da palma da mão direita, utilizando-se de movimento circular e vice-versa. ",
+                                        icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-06.jpg",
+                                        buttons: true,
+                                        }).then(function(result) {
+                                        if (result) {
+                                            swal({
+                                            text: "Friccione as polpas digitais e unhas da mão direita contra a palma da mão esquerda, fazendo um movimento circular e vice-versa ",
+                                            icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-07.jpg",
+                                            buttons: true,
+                                            }).then(function(result) {
+                                            if (result) {
+                                                swal({
+                                                text: "Quando estiverem secas, suas mãos estarão seguras.  ",
+                                                icon: img ="https://www.paho.org/bra/images/stories/covid-19/rub-08.jpg",
+                                                buttons: true,
+                                    
+                                                })
+                                            
+
+
+                                                .then(function(result) {
+                                                    if (result) {
+                                                               
+                                                        continue2()
+                                                                 
+                                                            
+                                                    } 
+                                                });
+
+                                                
+                                                                
+                                                } 
+                                                });
+                                            
+                                        } 
+                                        });
+                                    
+                                    } 
+                                    });
+                                    
+                                } 
+                                });
+                                            
+                            } 
+                            });
+                            
+                        } 
+                        });
+                    
+                    } 
+                    });
+                    
+                } 
+                });
+
+
+        }
+
+
+
+
+
+
+
+
+        function continue2(){
+
+
+
+                var cobre = prompt('Você cobre o nariz e boca ao tossir ou espirrar? ')
+
+                if(cobre == 'sim' || cobre == 'Sim' || cobre == 'SIM'){
+                    alert ('Você está correto em fazer isso e para ter mais eficácia é importante que você cubra a boca e o nariz com um lenço de papel, ou, com a boca no antebraço, mas nunca nas mãos. Evitando a circulação de doenças.')
+                }
+
+                else{
+                    alert ('Huuum, devemos começar a tomar essas medidas então! É importante cobrir o nariz e a boca ao tossir ou espirra para evitar a circulação de doenças, e para ter mais eficácia é necessário cobrir a boca e o nariz com um lenço de papel, ou, com a boca no antebraço, mas nunca nas mãos.')
+                }
+
+
+                var evita = prompt('Você evita tocar em seu rosto, especialmente olhos, nariz e boca, sem ter higienizado as mãos? ')
+
+                if(evita == 'sim' || evita == 'Sim' || evita == 'SIM'){
+                    alert ('Você está correto em fazer isso, pois vírus e bactéria estão presentes em maçanetas, torneiras, teclados entre outras objetos e superfícies compartilhadas, sendo assim, o micro-organismos entra em nosso corpo.')
+                }
+
+                else{
+                    alert ('Seria importante que começasse a ter esse habito, pois vírus e bactéria estão presentes em maçanetas, torneiras, teclados entre outras objetos e superfícies compartilhadas, sendo assim, o micro-organismos entra em nosso corpo.')
+                }
+
+
+
+                var ventilados = prompt('Você mantém seus ambientes bem ventilados?')
+
+                if(ventilados == 'sim' || ventilados == 'Sim' || ventilados == 'SIM'){
+                    alert ('Muito bom, pois isso diminui o risco de transmissão, sendo assim, a ventilação é importante em todos os ambientes. Lugares fechados dificultam a circulação de ar. ')
+                }
+
+                else{
+                    alert ('Isso é um problema, que posso te ajudar, começar a deixar janelas abertas, diminui o risco de transmissão, sendo assim, a ventilação é importante em todos os ambientes. Lugares fechados dificultam a circulação de ar. ')
+                }
+
+                var saiu = prompt('Você saiu de casa hoje?')
+
+                if(saiu == 'sim' || saiu == 'Sim' || saiu == 'SIM'){
+                    var mascara = prompt ('Ao sair você utilizou máscara?')   
+
+                    if(mascara == 'sim' || mascara == 'Sim' || mascara == 'SIM'){
+                        alert ('Isso é importante! Estudos chineses mostrarem que um grande número de infecções acontece a partir de pessoas assintomáticas, que poderiam jogar no ar gotículas contaminadas ao falar, por exemplo. A máscara, então, funcionaria como uma barreira física para essas partículas maiores.')
+                    }
+
+                    else{
+                        alert('Que tal começar a utiliza-la! Estudos chineses mostrarem que um grande número de infecções acontece a partir de pessoas assintomáticas, que poderiam jogar no ar gotículas contaminadas ao falar, por exemplo. A máscara, então, funcionaria como uma barreira física para essas partículas maiores.')
+                    }
+                }
+
+                
+                var sabe = prompt('Você sabe o que deve fazer se tiver sintomas de COVID-19 e quando devo procurar atendimento médico?')
+
+                if(sabe == 'sim' || sabe == 'Sim' || sabe == 'SIM'){
+                    alert ('Muito bom')
+                }
+
+                else{
+                    alert ('Se você tiver sintomas menores, como tosse leve ou febre leve, geralmente não há necessidade de procurar atendimento médico. Ficar em casa, fazer autoisolamento (conforme as orientações das autoridades nacionais) e monitorar seus sintomas. ')
+
+                    alert ('No entanto, se você mora em uma área com malária ou dengue, é importante não ignorar os sintomas da febre. Procure ajuda médica. Ao comparecer ao serviço de saúde, use uma máscara se possível, mantenha pelo menos 1 metro de distância de outras pessoas e não toque nas superfícies com as mãos. Se for uma criança que estiver doente, ajude-a a seguir esta orientação. ')
+
+                    alert ('Procure atendimento médico imediato se tiver dificuldade de respirar ou dor/pressão no peito. Se possível, ligue para o seu médico com antecedência, para que ele possa direcioná-lo para o centro de saúde certo. ')
+                }
+               
+
+                var compras = prompt('Você sabe fazer compras com segurança?')
+                
+                if(compras == 'sim' || compras == 'Sim' || compras == 'SIM'){
+                    alert ('Muito bem')
+                }
+                else{
+                    alert ('Ao fazer compras, mantenha pelo menos 1 metro de distância dos outros e evite tocar nos olhos, boca e nariz. Se possível, higienize as alças dos carrinhos de compras ou cestas antes. Lave bem as mãos após chegar e casa e depois de manusear e armazenar os produtos adquiridos. Atualmente, não há caso confirmado de COVID-19 transmitido por meio de alimentos ou embalagens de alimentos.')
+                }
+
+                var pessoas = prompt('Pessoas que se recuperaram da COVID-19 podem ficar imunes ou serem infectadas mais de uma vez?')
+
+                alert ('Atualmente, não há evidências de que as pessoas que se recuperaram da COVID-19 e tenham anticorpos estejam protegidas contra uma segunda infecção. É esperado que a maioria dos indivíduos infectados desenvolva uma resposta de anticorpos que forneça algum nível de proteção. O que ainda não se sabe é o nível de proteção ou quanto tempo vai durar. A OMS está trabalhando com cientistas de todo o mundo para entender melhor a resposta do corpo à infecção por COVID-19. ') 
+
+
+            continue3();
+                
+        }
+
+            
+
+        function continue3(){
+
+
+            var alongamento = prompt('Você está se exercitando nessa quarentena?')
+
+            if(alongamento == 'sim' || alongamento == 'Sim' || alongamento == 'SIM'){
+
+                alert('Legal, isso é muito bom!  A importância da atividade física para a saúde e para a qualidade de vida é enorme, pode aumentar a disposição, melhorar o condicionamento físico, prevenir doenças, fortalecer o organismo e contribui também para um bom humor, além de muitas outras coisas')
+            }
+
+            else{
+                alert('Huuuum, que tal começarmos! Atividades físicas podem ajudar na saúde e para na qualidade de vida, pode aumentar a disposição, melhorar o condicionamento físico, prevenir doenças, fortalecer o organismo e contribui também para um bom humor, além de muitas outras coisas.')
+            }
+
+            var quer = prompt('Você quer fazer um exercício comigo? ')
+
+                if(quer == 'sim' || quer == 'Sim' || quer == 'SIM'){
+                    
+                
+
+
+                    swal({
+                        text: "Quando estiverem secas, suas mãos estarão seguras.  ",
+                        icon: img ="https://2.bp.blogspot.com/-prVPVlyFHiE/XDCq9ehRBNI/AAAAAAAAgYs/ADJ4o7mtCaAbxUmYuD1TRLeSQ_TxkUTEwCLcBGAs/s640/alongamento%2525exercicio.jpg",
+                        buttons: true,              
+                    })                     
+
+                    .then(function(result) {
+                    if (result) {
+                                                               
+                        continue4()
+                                                                 
+                    } 
+                    });
+
+
+
+
+                }
+
+                else{
+                    continue4()
+                }
+
+
+        }    
+
+        
+        function continue4(){
+            
+            var gosta = prompt('Você gosta de assistir série nessa quarentena?')
+
+            if(gosta == 'sim' || gosta == 'Sim' || gosta == 'SIM'){
+                alert ('Então segue uma lista de série que você pode estar assistindo.')
+                alert ('Veja agora quais são as 15 séries com notas mais elevadas segundo o IMDb e que estão disponíveis na Netflix./n', 'Breaking Bad /n', 'Rick and Morty /n',  'Avatar: A Lenda de Aang /n', 'Narcos /n', 'Stranger Things /n' ,'House Of Cards /n', 'Black Mirror /n' ,'Vikings /n' ,'Suits  /n', 'Sherlock /n', 'Fargo /n', 'Dark ')
+            }
+
+
+
+            var sozinho = prompt('Você se sente sozinho nessa quarentena?')
+
+            if(sozinho == 'sim' || sozinho == 'Sim' || sozinho == 'SIM'){
+                    alert ('Lembre-se que estou aqui para te ajudar!')
+                    var contar = prompt('Quer me contar o que está passando?')
+            }    
+                    if(contar == 'sim' || contar == 'Sim' || contar == 'SIM'){
+                        var gostaria = prompt('Entendo... Você gostaria de uma frase de apoio?')
+                        
+                        if(gostaria == 'sim' || gostaria == 'Sim' || gostaria == 'SIM'){
+                            
+                            
+                            
+                            swal({
+                            
+                                text: "VAMOS ENCARAR ESSE TEMPO COMO UM INTERVALO DA VIDA. UMA OPORTUNIDADE PARA PENSAR E REPENSAR. QUE DEPOIS DESSA, SEJAMOS TODOS SERES MAIS EVOLUÍDOS.",
+                             
+                                button: "Clique Aqui!",
+                            })
+                            
+                            
+                        
+                        }
+                    }
+                    
+                    
+            
+
+
+
+
+
+        }
+
+
+        
+
+    </script>
+
+
+
+    <style type="text/css">
+
+
+    
+
+        body{
+            background-color: blue;
+            background-image: url('https://www.santos.sp.gov.br/static/files_www/styles/newspagemodal/public/field/image/dc540b41-3960-4c41-9536-aebfe5e75205.jpg');
+            /*background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right bottom;*/
+        }
+
+            /*ANIMACOES*/
+        @keyframes animacao-caixa{
+            from{
+               /* background: red;*/
+                background-image: url('https://coffito.gov.br/campanha/coronavirus/img/coronavirus.png');
+                border-radius: 0px;
+                top: 0;
+                left: 0;
+            }
+            to{
+               /* background: green;*/
+                background-image: url('https://coffito.gov.br/campanha/coronavirus/img/coronavirus.png');
+                border-radius: 300px;
+                top: 200px;
+                left: 200px;
+            }
+
+        }
+
+        @keyframes animacao-caixa2{
+            from{
+               /* background: red;*/
+                background-image: url('https://coffito.gov.br/campanha/coronavirus/img/coronavirus.png');
+                border-radius: 0px;
+                top: 0;
+                right: 0;
+            }
+            to{
+               /* background: green;*/
+                background-image: url('https://coffito.gov.br/campanha/coronavirus/img/coronavirus.png');
+                border-radius: 300px;
+                top: 200px;
+                right: 200px;
+            }
+
+        }
+
+        #caixa{
+            width: 418px;
+            height: 438px;
+            /*background: red;*/
+            background-image: url('https://coffito.gov.br/campanha/coronavirus/img/coronavirus.png');
+            position: relative;
+            animation-name: animacao-caixa;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: 50;
+            animation-direction: alternate;    
+            float: left;
+        }
+
+        #caixa2{
+            width: 418px;
+            height: 438px;
+            /*background: red;*/
+            background-image: url('https://coffito.gov.br/campanha/coronavirus/img/coronavirus.png');
+            position: relative;
+            animation-name: animacao-caixa2;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: 50;
+            animation-direction: alternate;  
+            float: right;  
+        }
+
+
+        #branco{
+            color: white;
+        }
+
+        #play{
+            
+            
+            left: 200px;
+            
+            
+        }
+
+        .clear{
+			clear: both;
+		}
+
+    </style>
+    
+
+    
+    
+
+
+    
+
+
+</head>
+
+<body>
+    
+    <div onclick="dialogo()" id="play">
+        <center>
+        <img src="https://image.flaticon.com/icons/png/128/2433/2433328.png" id="play" >
+        <h1 id="branco">Clique no Botão para conversar com o RoboCV19</h1>
+        </center>
+    </div>
+
+
+
+    <div id="caixa">
+        
+    </div>
+
+    <div id="caixa2">
+        
+    </div>
+
+   
+
+
+</body>
+
+
+
+</html>
